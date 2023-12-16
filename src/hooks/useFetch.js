@@ -7,10 +7,6 @@ const useFetch = (endpoint) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // https://api.themoviedb.org/3/movie/901362?language=en-US   /// deatils for movie id
-  // https://api.themoviedb.org/3/search/movie?query=tt&include_adult=false&language=en-US&page=1  // search  20% spacing
-  // 'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1' /// now playing with pg n
-
   const options = {
     method: "GET",
     url: endpoint,
@@ -41,8 +37,6 @@ const useFetch = (endpoint) => {
   useEffect(() => {
     dataMinning();
   }, []);
-
-  //const reMinning = () => {};
 
   return { data, loading, error, results };
 };

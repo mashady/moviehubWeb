@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
-// on the navbar component when we call saubmit function it navigate directly to the search route
 
 const Navbar = () => {
   return (

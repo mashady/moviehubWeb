@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
 import CardCover from "./CardCover";
 import CardHeader from "./CardHeader";
 import useFetch from "../hooks/useFetch";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const TrendingNow = ({}) => {
+const TrendingNow = () => {
   const navigate = useNavigate();
   let apiEndpoint =
     "https://api.themoviedb.org/3/trending/movie/day?language=en-US";
@@ -18,7 +17,6 @@ const TrendingNow = ({}) => {
     });
   };
 
-  // const kk = results.slice(0, 8); // slice the array to make a limit of items
   return (
     <div className="contr  p-6 mt-6">
       <CardHeader title="Trending now" handleSeeMore={handleSeeMore} />

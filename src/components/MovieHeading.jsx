@@ -1,5 +1,3 @@
-import React from "react";
-
 const MovieHeading = ({ data }) => {
   return (
     <div className="mb-6">

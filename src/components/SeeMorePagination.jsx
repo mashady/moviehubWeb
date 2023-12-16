@@ -14,13 +14,6 @@ const SeeMorePagination = ({
   const [page, setPage] = useState(pageNumber);
   console.log(page);
 
-  // options
-  /*
-  page != pageNumber
-    ? console.log("no match", page)
-    : console.log(" match", page);
-*/
-
   const chnagePageData = async (page) => {
     console.log("page data changed", page, term);
     console.log(`${api}&page=${page}`);

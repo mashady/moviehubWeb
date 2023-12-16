@@ -9,13 +9,6 @@ const Pagination = ({ pageNumber, term, totalPages, setLoading, api }) => {
   console.log(page);
   console.log(term);
 
-  // options
-  /*
-  page != pageNumber
-    ? console.log("no match", page)
-    : console.log(" match", page);
-*/
-
   const chnagePageData = async (page) => {
     console.log("page data changed", page, term);
     const options = {
@@ -46,9 +39,6 @@ const Pagination = ({ pageNumber, term, totalPages, setLoading, api }) => {
   };
   const handleNextButton = async () => {
     setPage(page + 1);
-    console.log(page);
-
-    //console.log(page);
   };
   return (
     <div className="flex items-center justify-center p-6">

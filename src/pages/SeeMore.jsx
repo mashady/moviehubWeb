@@ -9,7 +9,6 @@ const SeeMore = () => {
   const { state } = useLocation();
   const { id, api, param } = state;
   const [loading, setLoading] = useState(true);
-  console.log(api);
   useEffect(() => {
     setTimeout(() => setLoading(false), 2000);
   }, []);

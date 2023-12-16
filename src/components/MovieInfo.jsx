@@ -1,5 +1,3 @@
-import React from "react";
-
 const MovieInfo = ({ data }) => {
   return (
     <div className="mb-6 flex items-center justify-between text-left text-sm lg:w-10/12 lg:text-lg">

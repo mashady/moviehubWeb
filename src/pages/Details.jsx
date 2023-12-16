@@ -1,6 +1,6 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
-import MovieCast from "../components/MovieCast";
 import MovieHeading from "../components/MovieHeading";
 import MovieImage from "../components/MovieImage";
 import MovieInfo from "../components/MovieInfo";
@@ -10,10 +10,8 @@ import MoviegGenre from "../components/MoviegGenre";
 
 import useFetch from "../hooks/useFetch";
 
-import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
 const Details = () => {
-  // here we will recieve the id of the movie
   const { state } = useLocation();
   const { id } = state;
 
@@ -47,6 +45,7 @@ const Details = () => {
 };
 
 export default Details;
+
 export function renderRating(rating) {
   if (rating !== undefined) {
     return (rating / 2).toFixed(1);

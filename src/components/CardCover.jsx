@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import imgNotFound from "../assets/no-iamge.svg";
 const CardCover = ({
   title,
@@ -25,7 +25,6 @@ const CardCover = ({
       .replace(/\s+/g, "-") // replace spaces with hyphens
       .replace(/-+/g, "-");
     navigate(`/movie/${q}`, { state: { id: movieId } });
-    console.log("hey");
   };
 
   return (

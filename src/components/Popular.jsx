@@ -1,6 +1,6 @@
 import useFetch from "../hooks/useFetch";
 import Collections from "./Collections";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Poprular = () => {
   const navigate = useNavigate();

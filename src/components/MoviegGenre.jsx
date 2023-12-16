@@ -17,21 +17,3 @@ const MoviegGenre = ({ data }) => {
 };
 
 export default MoviegGenre;
-/*
-function rendreGenres(aa3) {
-  if (aa3.length !== 0) {
-    return aa3.map((genre) => {
-      return (
-        <li
-          key={genre.id}
-          className="mr-2 mb-2 flex items-center justify-center rounded-md border-none text-[#FFF] bg-[#5865f2] py-px px-2 text-center font-medium"
-        >
-          {genre.name}
-        </li>
-      );
-    });
-  } else {
-    return "N/A";
-  }
-}
-*/

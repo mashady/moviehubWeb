@@ -1,9 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import IconSearch from "./IconSearch";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
-// or handle navigation proccess here
 
 const SearchBar = () => {
   const [searchText, setSearchText] = useState();
@@ -27,12 +25,10 @@ const SearchBar = () => {
 
     try {
       const res = await axios.request(options);
-      // console.log(res);
       navigate(`/search`, { state: { id: res.data, term: searchText } });
     } catch (error) {
       console.log(error);
     }
-    // write the navigation code
     console.log(searchText);
     setSearchText("");
   };
