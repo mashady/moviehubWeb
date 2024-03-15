@@ -4,9 +4,7 @@ A simple movie app deal with TMDB APIs
 
 ## Screenshots quick look
 
-![App Screenshot](https://github.com/mashady/moviehubWeb/blob/main/promotion/screenone.png)
-
-![App Screenshot](https://github.com/mashady/moviehubWeb/blob/main/promotion/screentwo.png)
+![App Screenshot](https://github.com/mashady/moviehubWeb/blob/main/promotion/appHeaderMovieHub.png)
 
 ## Demo
 

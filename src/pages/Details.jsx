@@ -22,6 +22,7 @@ const Details = () => {
   useEffect(() => {
     setTimeout(() => setLoading(false), 3000);
   }, []);
+
   if (loading) {
     return <Loading />;
   }

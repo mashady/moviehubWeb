@@ -10,7 +10,8 @@ const CardCover = ({
 }) => {
   // frpm here we will send the id of the movie
   const navigate = useNavigate();
-  const [imgLoad, setImgLoad] = useState(true);
+  const [imageLoading, setImageLoading] = useState(true);
+
   const handleImageLoad = () => {
     //https://image.tmdb.org/t/p/original//2pYgOBtBaFxAELQGj6p86vuIhhG.jpg
   };
@@ -36,21 +37,32 @@ const CardCover = ({
           : " relative h-[133px] md:h-[140px] lg:h-[174px] rounded-lg flex justify-center"
       }
     >
-      <img
-        src={
-          movieBackDrop
-            ? `https://image.tmdb.org/t/p/original/${movieBackDrop}`
-            : moviePoster === null
-            ? imgNotFound
-            : `https://image.tmdb.org/t/p/original/${moviePoster}`
-        }
-        onLoad={() => setImgLoad(true)}
-        className={
-          moviePoster === null
-            ? "rounded-lg cursor-pointer min-h-[80%] max-h-[80%] min-w-[80%] max-w-[80%]"
-            : "rounded-lg cursor-pointer min-h-[100%] max-h-[100%] min-w-[100%] max-w-[100%] object-cover"
-        }
-      />
+      <div className="relative">
+        <div
+          className={
+            !imageLoading
+              ? ""
+              : "absolute top-0 w-full h-full rounded-md skelton-image bg-gradient-to-r from-indigo-500"
+          }
+        ></div>
+        <img
+          src={
+            movieBackDrop
+              ? `https://image.tmdb.org/t/p/original/${movieBackDrop}`
+              : moviePoster === null
+              ? imgNotFound
+              : `https://image.tmdb.org/t/p/original/${moviePoster}`
+          }
+          onLoad={() => setImageLoading(false)}
+          className={
+            imageLoading
+              ? "opacity-0"
+              : moviePoster === null
+              ? "rounded-lg cursor-pointer min-h-[80%] max-h-[80%] min-w-[80%] max-w-[80%]"
+              : "rounded-lg cursor-pointer min-h-[100%] max-h-[100%] min-w-[100%] max-w-[100%] object-cover"
+          }
+        />
+      </div>
     </div>
   );
 };
