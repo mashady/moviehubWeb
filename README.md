@@ -11,6 +11,10 @@ A simple movie app deal with TMDB APIs
 https://quiet-rolypoly-d76ef3.netlify.app &
 https://moviehub-5zmnjvhoe-mashady.vercel.app/
 
+## Demo Video Via YouTube
+
+https://youtu.be/CUf9mYzcPRc
+
 ## Installation
 
 After cloning the project run
@@ -37,8 +41,4 @@ Then to start the app run
 
 ## Authors
 
-- [@mashady](https://www.github.com/mashady)
-
-## Support
-
-For support, email fake@fake.com or join our Slack channel.
+create to you with all love 💜 - [@mashady](https://www.github.com/mashady)
